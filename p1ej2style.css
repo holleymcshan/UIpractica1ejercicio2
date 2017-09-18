@@ -24,7 +24,7 @@ h3{
 }
 .profpic{
   width: auto;
-  height:96%;
+  height:60px;
   border:0;
   float: right;
   border-radius: 50%;
@@ -55,10 +55,12 @@ ul{
 .flexcol{
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
 }
 
 .gallery{
-  width:45%%;
+  display: flex;
+  flex-grow: 1;
 }
 
 
@@ -73,8 +75,9 @@ select{
 
 footer{
   height: 100px;
+  width: 100%;
   border: 2px solid grey;
-  bottom:0px;
+  bottom: 0px;
 }
 .quad{
   border-radius: 1%;
