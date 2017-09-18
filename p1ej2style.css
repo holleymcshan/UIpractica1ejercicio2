@@ -1,0 +1,94 @@
+.header{
+  border: 2px solid grey;
+  width: 96%;
+  height:100px;
+  padding: 2%;
+}
+
+.logo{
+  width: auto;
+  height:96%;
+  border:0;
+  float: left;
+  position: relative;
+}
+h1{
+  float:left;
+  text-align: justify;
+  padding-left: 2%
+}
+h3{
+  float:right;
+  text-align: justify;
+  padding-right: 2%
+}
+.profpic{
+  width: auto;
+  height:96%;
+  border:0;
+  float: right;
+  border-radius: 50%;
+  position: relative;
+}
+
+.user{
+  float: right;
+  padding-right: 2%;
+}
+
+.currvid{
+  float:right;
+  align-items: stretch;
+  width: auto;
+  height: auto;
+  padding-right: 2%;
+}
+
+ul{
+  width: 25%;
+}
+
+.flextainer{
+  display: flex;
+}
+
+.flexcol{
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery{
+  width:45%%;
+}
+
+
+input{
+  margin-bottom: 2%;
+}
+
+select{
+  margin-bottom: 2%;
+}
+
+
+footer{
+  height: 100px;
+  border: 2px solid grey;
+  bottom:0px;
+}
+.quad{
+  border-radius: 1%;
+  height: 60%;
+  float:right;
+  padding:2%;
+}
+
+.rect{
+  height: 60%;
+  float: right;
+  padding:2%;
+}
+p {
+    font-family: verdana;
+    font-size: 12px;
+}
