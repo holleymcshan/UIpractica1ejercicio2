@@ -63,20 +63,11 @@ h3{
   justify-content: space-around;
 }
 
-
-input{
-  margin-bottom: 2%;
-}
-
-select{
-  margin-bottom: 2%;
-}
-
-
 footer{
   height: 50px;
   border: 2px solid grey;
   bottom: 0px;
+  width: 100%;
 }
 
 
