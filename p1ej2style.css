@@ -69,7 +69,16 @@ footer{
   bottom: 0px;
   width: 100%;
 }
+.footer p{
+  width: 10%;
+  align:left;
+}
 
+.rect{
+  height: 60%;
+  float: right;
+  padding:2%;
+}
 
 .quad{
   border-radius: 1%;
@@ -78,11 +87,6 @@ footer{
   padding:2%;
 }
 
-.rect{
-  height: 60%;
-  float: right;
-  padding:2%;
-}
 p {
     font-family: verdana;
     font-size: 12px;
