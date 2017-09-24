@@ -69,22 +69,22 @@ ul {
   width: 30%;
 }
 
-
-input{
-  margin-bottom: 2%;
-}
-
-select{
-  margin-bottom: 2%;
-}
-
-
 footer{
   height: 50px;
   border: 2px solid grey;
   bottom: 0px;
+  width: 100%;
+}
+.footer p{
+  width: 10%;
+  align:left;
 }
 
+.rect{
+  height: 60%;
+  float: right;
+  padding:2%;
+}
 
 .quad{
   border-radius: 1%;
@@ -93,11 +93,6 @@ footer{
   padding:2%;
 }
 
-.rect{
-  height: 60%;
-  float: right;
-  padding:2%;
-}
 p {
     font-family: verdana;
     font-size: 12px;
