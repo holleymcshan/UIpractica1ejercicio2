@@ -1,0 +1,104 @@
+
+.header{
+  border: 2px solid grey;
+  width: 96%;
+  height:100px;
+  padding: 2%;
+}
+
+.logo{
+  width: auto;
+  height:96%;
+  border:0;
+  float: left;
+  position: relative;
+}
+h1{
+  float:left;
+  text-align: justify;
+  padding-left: 2%
+}
+h3{
+  float:right;
+  text-align: justify;
+  padding-right: 2%
+}
+.profpic{
+  width: auto;
+  height:60px;
+  border:0;
+  float: right;
+  padding-bottom: 2%;
+  border-radius: 50%;
+  position: relative;
+}
+
+.user{
+  float: right;
+  padding-right: 2%;
+}
+
+.currvid{
+  float:right;
+  width: 60%;
+  padding: 2%;
+}
+
+.flextainer{
+  display: -webkit-flex;
+  display: flex;
+  border: 2px solid grey;
+  -webkit-justify-content: center;
+  justify-content: center;
+  align-items: stretch;
+  height: 50%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.copyr{
+  float: left;
+}
+
+.gallery{
+  margin: 1%;
+  justify-content: space-around;
+  float: left;
+  width: 30%;
+}
+
+
+input{
+  margin-bottom: 2%;
+}
+
+select{
+  margin-bottom: 2%;
+}
+
+
+footer{
+  height: 50px;
+  border: 2px solid grey;
+  bottom: 0px;
+}
+
+
+.quad{
+  border-radius: 1%;
+  height: 60%;
+  float:right;
+  padding:2%;
+}
+
+.rect{
+  height: 60%;
+  float: right;
+  padding:2%;
+}
+p {
+    font-family: verdana;
+    font-size: 12px;
+}
