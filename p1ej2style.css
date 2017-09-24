@@ -40,27 +40,33 @@ h3{
 
 .currvid{
   float:right;
-  align-items: stretch;
-  padding-right: 2%;
-  flex: 2;
+  width: 60%;
+  padding: 2%;
 }
 
 .flextainer{
+  display: -webkit-flex;
   display: flex;
-  border:5px solid coral;
+  border: 2px solid grey;
+  -webkit-justify-content: center;
   justify-content: center;
   align-items: stretch;
   height: 50%;
 }
 
+ul {
+  list-style-type: none;
+}
 
-
-.vidinfo{
-  flex:1;
+.copyr{
+  float: left;
 }
 
 .gallery{
+  margin: 1%;
   justify-content: space-around;
+  float: left;
+  width: 30%;
 }
 
 
