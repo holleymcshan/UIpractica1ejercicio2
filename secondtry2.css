@@ -45,13 +45,18 @@ h3{
 }
 
 .flextainer{
-  display: -webkit-flex;
   display: flex;
   border: 2px solid grey;
-  -webkit-justify-content: center;
   justify-content: center;
   align-items: stretch;
   height: 50%;
+}
+
+.flexfooter{
+  display: flex;
+  border: 2px solid grey;
+  align-items: stretch;
+  height: 10%;
 }
 
 ul {
@@ -78,23 +83,15 @@ select{
   margin-bottom: 2%;
 }
 
-
-footer{
-  height: 50px;
-  border: 2px solid grey;
-  bottom: 0px;
-}
-
-
 .quad{
   border-radius: 1%;
-  height: 60%;
+  height: 30%;
   float:right;
   padding:2%;
 }
 
 .rect{
-  height: 60%;
+  height: 30%;
   float: right;
   padding:2%;
 }
