@@ -52,28 +52,15 @@ h3{
   height: 50%;
 }
 
-.flexfooter{
-  display: flex;
-  border: 2px solid grey;
-  align-items: stretch;
-  height: 10%;
-}
-
 ul {
   list-style-type: none;
-}
-
-.copyr{
-  float: left;
 }
 
 .gallery{
   margin: 1%;
   justify-content: space-around;
-  float: left;
   width: 30%;
 }
-
 
 input{
   margin-bottom: 2%;
@@ -83,17 +70,35 @@ select{
   margin-bottom: 2%;
 }
 
+footer{
+  height: 100px;
+  border: 2px solid grey;
+  width: 100%;
+}
+
+.footercont{
+  display: flex;
+  justify-content: flex-end;
+  height: 60%;
+  align-items: stretch;
+  width:95%;
+}
+
+.copyr{
+  float: left;
+  width: 70%;
+}
 .quad{
   border-radius: 1%;
-  height: 30%;
-  float:right;
+  height: 60%;
   padding:2%;
+  float: right;
 }
 
 .rect{
-  height: 30%;
-  float: right;
+  height: 60%;
   padding:2%;
+  float: right;
 }
 p {
     font-family: verdana;
