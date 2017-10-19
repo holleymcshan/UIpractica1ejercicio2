@@ -8,7 +8,25 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 
-<body>
+<body onload="document.getElementById('id01').style.display='inline-block'">
+  <div id="id01" class="modal">
+  <form name ="modal" class="modal-content animate">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Crystal_Clear_kdm_user_female.svg/200px-Crystal_Clear_kdm_user_female.svg.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+      <label><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+      <button type="submit" class="loginbtn" onclick="saveCookie()">Login</button>
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+    </div>
+  </form>
+  </div>
+
   <div class="header">
     <img class="logo" src="https://cdn3.iconfinder.com/data/icons/line/36/film_clapper-512.png" alt="cinema icon">
     <h1>Home</h1>
@@ -23,43 +41,59 @@
   <div class="flextainer">
     <div>
       <div class="like_button">
-        <button>Likes</button>
-        <span class="count">100</span>
+        <button onclick="incrementLikes()">Likes</button>
+        <span id="numLikes" class="count">100</span>
       </div>
-      <div class="share_button">
+      <div class="share_button" onclick="incrementShares()">
         <button>Shares</button>
-        <span class="count">100</span>
+        <span id="numShares" sclass="count">100</span>
       </div>
-<p><i>This video is one of Button Poetry's most popular posts. The spoken word poem was a contest winner.</i><p>
+    <p id="description04" ><i>This video is one of Button Poetry's most popular posts. The spoken word poem was a contest winner.</i><p>
 
     </div>
 
-    <div>
-      <a>
-        <img class="currvid" src="https://my.leadpages.net/template/6573456169107456/5.7/raw/img/video.png" alt="default video"></a>
-    </div>
+    <!-- <div> -->
+    <video id="video1" class="currvid" draggable="true" ondragstart="drag()" controls>
+      <source src="images/ocd.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+      <!-- <a>
+        <img class="currvid" src="https://my.leadpages.net/template/6573456169107456/5.7/raw/img/video.png" alt="default video"></a> -->
+    <!-- </div> -->
   </div>
 
   <br>
   <h2>Other Videos</h2>
   <div class="flextainer">
     <div class="gallery">
-      <a>
+      <!-- <a>
         <img src="https://my.leadpages.net/template/6573456169107456/5.7/raw/img/video.png" alt="Northern Lights" width="300" height="200">
-        </a>
-      <div class="desc">Add a description of the video here    <i class="material-icons">add_box</i></div>
+        </a> -->
+        <video id="video2" width="300" height="200" draggable="true" ondragstart="drag()" controls>
+          <source src="images/friend_zone.mp4" type="video/mp4">
+          Your browser does not support HTML5 video.
+        </video>
+      <div id="description02" class="desc">Add a description of the video here    <i class="material-icons">add_box</i></div>
+    </div>
+    <div class="gallery" ondrop="drop(event)">
+      <!-- <a>
+        <img src="https://my.leadpages.net/template/6573456169107456/5.7/raw/img/video.png" alt="Northern Lights" width="300" height="200">
+        </a> -->
+        <video id="video1" width="300" height="200" draggable="true" ondragstart="drag()" controls>
+          <source src="images/girl_code_101.mp4" type="video/mp4">
+          Your browser does not support HTML5 video.
+        </video>
+      <div id="description03" class="desc">Add a description of the video here    <i class="material-icons">add_box</i></div>
     </div>
     <div class="gallery">
-      <a>
+      <!-- <a>
         <img src="https://my.leadpages.net/template/6573456169107456/5.7/raw/img/video.png" alt="Northern Lights" width="300" height="200">
-        </a>
-      <div class="desc">Add a description of the video here    <i class="material-icons">add_box</i></div>
-    </div>
-    <div class="gallery">
-      <a>
-        <img src="https://my.leadpages.net/template/6573456169107456/5.7/raw/img/video.png" alt="Northern Lights" width="300" height="200">
-        </a>
-      <div class="desc">Add a description of the video here    <i class="material-icons">add_box</i></div>
+        </a> -->
+        <video id="video1" width="300" height="200" draggable="true" ondragstart="drag(event)" controls>
+          <source src="images/shrinking_women.mp4" type="video/mp4">
+          Your browser does not support HTML5 video.
+        </video>
+      <div id="description04" class="desc">Add a description of the video here    <i class="material-icons">add_box</i></div>
     </div>
   </div>
 <br>
