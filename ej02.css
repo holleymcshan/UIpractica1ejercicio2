@@ -82,7 +82,6 @@ footer{
   display: flex;
   justify-content: flex-end;
   height: 60%;
-  align-items: stretch;
   width:95%;
 }
 
@@ -90,17 +89,18 @@ footer{
   float: left;
   width: 70%;
 }
+
+
 .quad{
   border-radius: 1%;
   height: 60%;
+  width:100%;
   padding:2%;
-  float: right;
 }
 
 .rect{
   height: 60%;
   padding:2%;
-  float: right;
 }
 p {
     font-family: verdana;
