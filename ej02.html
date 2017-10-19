@@ -2,6 +2,8 @@
 
 <html>
 <head>
+  <script src="ej02.js" type="text/javascript"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <link rel="stylesheet" href="ej02.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
@@ -20,11 +22,16 @@
   <h2>Video Title</h2>
   <div class="flextainer">
     <div>
-      <ul>
-        <li><i class="material-icons">favorite_border</i>Likes <span class="badge">1000</span></li>
-        <li><i class="material-icons">share</i>Shares <span class="badge">1000</span></li>
-        <li><p><i>This video is one of Button Poetry's most popular posts. The spoken word poem was a contest winner.</i><p></li>
-      </ul>
+      <div class="like_button">
+        <button>Likes</button>
+        <span class="count">100</span>
+      </div>
+      <div class="share_button">
+        <button>Shares</button>
+        <span class="count">100</span>
+      </div>
+<p><i>This video is one of Button Poetry's most popular posts. The spoken word poem was a contest winner.</i><p>
+
     </div>
 
     <div>
