@@ -20,24 +20,52 @@ function incrementShares(){
   document.getElementById("numShares").innerHTML = 100 + count;
 }
 
+function allowDrop(ev){
+  ev.preventDefault();
+}
 function drag(ev) {
-    ev.dataTransfer.setData("text", ev.target.id);
+  ev.dataTransfer.setData("text", ev.target.id);
 }
 
 function drop(ev){
   ev.preventDefault();
   var data = ev.dataTransfer.getData("text");
   var destination = ev.target;
-  var origin = document.getElementByID(data);
+  var origen = document.getElementById(data);
   var copyDestination=destination.src;
-  destination.src=origin.src;
-  origin.src=copyDestination;
+  destination.src=origen.src;
+  origen.src=copyDestination;
+  console.log(data);
+  console.log(origen.src);
+  console.log(event);
+  setInfo(data)
+
+}
+function setInfo(id){
+  var index = id.substring(id.indexOf('o')+ 1) - 1;
+  console.log(index);
+  console.log(document.getElementById(id).nextElementSibling.innerHTML);
+  document.getElementById(id).nextElementSibling.innerHTML = vidinfo[index].title;
+  document.getElementById("description0" + (index+1)).innerHTML= vidinfo[index].description;
+
 }
 
+function expand_collapse(id) {
+   var e = document.getElementById(id);
+   if(e.style.display = 'none'){
+      e.style.display = 'block';
+   }
+   else {
+      e.style.display = 'none';
+   }
+   console.log("expand called")
+   console.log(e)
+}
 var vid_1 = {
   title: "OCD - Neil Hilbord",
-  description: "This video is one of Button Poetry's most popular posts. The spoken word poem was a contest winner at Rustbelt 2013"
+  description: "This video is one of Button Poetry's most popular posts. The spoken word poem was a contest winner at Rustbelt 2013",
 };
+
 var vid_2 = {
   title: "Friend Zone - Dylan Garity",
   description: "Performing at the Saint Paul Soapboxing Poetry Slam in May 2013."
@@ -53,14 +81,14 @@ var vid_4 = {
 
 var vidinfo = [vid_1, vid_2, vid_3, vid_4];
 
-// $(".like_button button").on("click", function() {
-//   var $count = $(this).next();
-//   $count.html($count.html() * 1 + 1);
-//   console.log(count);
-// };
 
-function onclickOccurs(){
-  console.log(event);
+
+function reply_click()
+{
+  console.log(event.srcElement.id);
 }
 
-//document.getElementById("paragraph-1").addEventListener('click', onclickOccurs);
+//document.getElementById("video").addEventListener('click', reply_click);
+// document.getElementById('video2').addEventListener('click', reply_click);
+// document.getElementById('video3').addEventListener('click', reply_click);
+// document.getElementById('video4').addEventListener('click', reply_click);

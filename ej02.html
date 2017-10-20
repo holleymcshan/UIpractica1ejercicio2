@@ -38,8 +38,8 @@
 
   <br>
   <h2>Video Title</h2>
-  <div class="flextainer">
-    <div>
+  <div class="mainVidDiv" ondrop="drop(event)" ondragover="allowDrop(event)">
+    <div class = "mainVidText">
       <div class="like_button">
         <button onclick="incrementLikes()">Likes</button>
         <span id="numLikes" class="count">100</span>
@@ -48,52 +48,44 @@
         <button>Shares</button>
         <span id="numShares" sclass="count">100</span>
       </div>
-    <p id="description04" ><i>This video is one of Button Poetry's most popular posts. The spoken word poem was a contest winner.</i><p>
+    <p id="description01" ><i>This video is one of Button Poetry's most popular posts. The spoken word poem was a contest winner at Rustbelt 2013</i><p>
 
     </div>
-
-    <!-- <div> -->
-    <video id="video1" class="currvid" draggable="true" ondragstart="drag()" controls>
+    <video id="video1" poster="images/ocd.jpg" class="currvid" draggable="true" ondragstart="drag(event)" controls>
       <source src="images/ocd.mp4" type="video/mp4">
       Your browser does not support HTML5 video.
     </video>
-      <!-- <a>
-        <img class="currvid" src="https://my.leadpages.net/template/6573456169107456/5.7/raw/img/video.png" alt="default video"></a> -->
-    <!-- </div> -->
   </div>
 
   <br>
   <h2>Other Videos</h2>
-  <div class="flextainer">
+  <div class="flextainer" ondrop="drop(event)" ondragover="allowDrop(event)">
     <div class="gallery">
-      <!-- <a>
-        <img src="https://my.leadpages.net/template/6573456169107456/5.7/raw/img/video.png" alt="Northern Lights" width="300" height="200">
-        </a> -->
-        <video id="video2" width="300" height="200" draggable="true" ondragstart="drag()" controls>
+        <video id="video2" poster="images/friend_zone.jpg" width="300" height="200" draggable="true" ondragstart=""="drag(event)" controls>
           <source src="images/friend_zone.mp4" type="video/mp4">
           Your browser does not support HTML5 video.
         </video>
-      <div id="description02" class="desc">Add a description of the video here    <i class="material-icons">add_box</i></div>
+      <div id="title02" class="title">Friend Zone - Dylan Garity    </div>
+      <i class="material-icons" onclick="expand_collapse('description02')">add_box</i>
+      <div id="description02" class="desc">Performing at the Saint Paul Soapboxing Poetry Slam in May 2013.</div>
     </div>
     <div class="gallery" ondrop="drop(event)">
-      <!-- <a>
-        <img src="https://my.leadpages.net/template/6573456169107456/5.7/raw/img/video.png" alt="Northern Lights" width="300" height="200">
-        </a> -->
-        <video id="video1" width="300" height="200" draggable="true" ondragstart="drag()" controls>
+        <video id="video3" poster="images/girl_code_101.jpg" width="300" height="200" draggable="true" ondragstart="drag(event)" controls>
           <source src="images/girl_code_101.mp4" type="video/mp4">
           Your browser does not support HTML5 video.
         </video>
-      <div id="description03" class="desc">Add a description of the video here    <i class="material-icons">add_box</i></div>
+        <div id="title03" class="title"> Girl Code 101 - Blythe Baird </div>
+        <i class="material-icons" onclick="expand_collapse('description03')">add_box</i>
+        <div id="description03" class="desc">Blythe Baird, performing for Chicago at the 2014 National Poetry Slam.</div>
     </div>
     <div class="gallery">
-      <!-- <a>
-        <img src="https://my.leadpages.net/template/6573456169107456/5.7/raw/img/video.png" alt="Northern Lights" width="300" height="200">
-        </a> -->
-        <video id="video1" width="300" height="200" draggable="true" ondragstart="drag(event)" controls>
+        <video id="video4" poster="images/shrinking_women.jpg" width="300" height="200" draggable="true" ondragstart="drag(event)" controls>
           <source src="images/shrinking_women.mp4" type="video/mp4">
           Your browser does not support HTML5 video.
         </video>
-      <div id="description04" class="desc">Add a description of the video here    <i class="material-icons">add_box</i></div>
+        <div id="title04" class="title"> Shrinking Women - Lily Meyers   </div>
+        <i class="material-icons" onclick="expand_collapse('description04')">add_box</i>
+        <div id="description04" class="desc">Lily Myers, performing for Wesleyan University at the 2013 College Unions Poetry Slam Invitational. This poem was awarded Best Love Poem at the tournament.</div>
     </div>
   </div>
 <br>
