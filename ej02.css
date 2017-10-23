@@ -54,6 +54,8 @@
   width: 100%;
 }
 .mainVidText{
+  padding-left: 4%;
+  padding-top: 4%;
   float: left;
   width: 40%;
 }
