@@ -1,3 +1,10 @@
+// swap titles
+// get rid of posters
+// addcookies to 2
+// modify 3
+// double check doc
+
+
 // Get the modal
 var modal = document.getElementById('id01');
 
@@ -31,15 +38,20 @@ function drag(ev) {
 function drop(ev){
   ev.preventDefault();
   var data = ev.dataTransfer.getData("text");
-  console.log(data);
+  console.log("drop",data);
   var destination = ev.target;
   var origen = document.getElementById(data);
   var copyDestination=destination.src;
-  destination.src=origen.src;
-  origen.src=copyDestination;
-  setInfo(data)
 
+  console.log($('#'+ev.target.id).children().first()[0].src);
+  var mainVidInf = $('#'+ev.target.id).children().first()[0].src
+  $('#'+ev.target.id).children().first()[0].src= $('#'+data).children().first()[0].src;
+  $('#'+ev.target.id).get(0).load();
+
+  $('#'+data).children().first()[0].src = mainVidInf;
+  $('#'+data).get(0).load();
 }
+
 function setInfo(id){
   var index = id.substring(id.indexOf('o')+ 1) - 1;
   console.log(index);
