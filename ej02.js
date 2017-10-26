@@ -86,17 +86,38 @@ function reply_click()
   console.log(event.srcElement.id);
 }
 
-function getCookie(cname) { //get the cookie
-    var name = cname + "=";
-    var ca = document.cookie.split(';');
-    for(var i = 0; i < ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0) == ' ') {
-            c = c.substring(1);
-        }
-        if (c.indexOf(name) == 0) {
-            return c.substring(name.length, c.length);
-        }
+function getCookie(cname) {
+  var name = cname + "=";
+  var cookieArray = document.cookie.split(';');
+  for(var i = 0; i < cookieArray.length; i++) { // for every cookie in the array
+    var c = cookieArray[i]; // get the substring
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
     }
-    return "";
+  return " ";
+}
+function logIn(){
+  var email = document.getElementsByName("email")[0].value;
+  var password = document.getElementsByName("psw")[0].value;
+  console.log(email);
+  checkCookie(email,password);
+}
+function checkCookie(email, password) {
+    if (email == getCookie('email') && password == getCookie('password')) {
+        console.log("recognized email and password");
+        originalCookie = document.cookie;
+        fillInfo();
+    } else {  //abre la otra pagina
+        window.location.href = "file:///Users/hmcshan/github/iu-ejercicio1/index.html";
+        }
+}
+
+function fillInfo(){
+  var fields = ["fname", "lname", "email","dob","lang","profpic", "username", "address", "paymentmethod"]
+  document.getElementById("userNameHeader").innerHTML = getCookie("username");
+  $("profpic").attr("src",getCookie("profpic"));  //closeimg ./images
 }
