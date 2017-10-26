@@ -1,21 +1,6 @@
 // Get the modal
 var modal = document.getElementById('id01');
 
-function getCookie(cname) { //get the cookie
-    var name = cname + "=";
-    var ca = document.cookie.split(';');
-    for(var i = 0; i < ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0) == ' ') {
-            c = c.substring(1);
-        }
-        if (c.indexOf(name) == 0) {
-            return c.substring(name.length, c.length);
-        }
-    }
-    return "";
-}
-
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
     if (event.target == modal) {
@@ -27,7 +12,7 @@ var count = 0;
 function incrementLikes(){
   count++;
   document.getElementById("numLikes").innerHTML = 100 + count;
-  console.log("increment likes called")
+  console.log("increment likes called");
 }
 
 function incrementShares(){
@@ -39,7 +24,7 @@ function allowDrop(ev){
   ev.preventDefault();
 }
 function drag(ev) {
-  console.log(ev)
+  console.log(ev);
   ev.dataTransfer.setData("text", ev.target.id);
 }
 
@@ -53,7 +38,7 @@ function drop(ev){
 
   //swap 1
   console.log($('#'+ev.target.id).children().first()[0].src);
-  var mainVidInf = $('#'+ev.target.id).children().first()[0].src
+  var mainVidInf = $('#'+ev.target.id).children().first()[0].src;
   console.log("mainvidinf: "+mainVidInf)
 
   //swap 2
@@ -75,15 +60,14 @@ function setInfo(id){
   console.log('old des for main'+ oldDesc);
 
   //swap 1
-  document.getElementById("title01").innerHTML = document.getElementById("title0"+index).innerHTML;
-  document.getElementById("description01").innerHTML = document.getElementById("description0"+index).innerHTML
+  document.getElementById("title01").innerHTML = "Now Watching: "+document.getElementById("title0"+index).innerHTML;
+  document.getElementById("description01").innerHTML = document.getElementById("description0"+index).innerHTML;
 
   //swap 2
   document.getElementById("title0"+index).innerHTML = oldTitle;
   document.getElementById("description0"+index).innerHTML = oldDesc;
   console.log('Should be Blytheblair ....'+document.getElementById('title01').innerHTML);
 }
-
 
 function expand_collapse(id) {  //expand / collapse description
    var e = document.getElementById(id);
@@ -93,12 +77,26 @@ function expand_collapse(id) {  //expand / collapse description
    else {
       e.style.display = 'none';
    }
-   console.log("expand called")
-   console.log(e)
+   console.log("expand called");
+   console.log(e);
 }
-
 
 function reply_click()
 {
   console.log(event.srcElement.id);
+}
+
+function getCookie(cname) { //get the cookie
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
 }
